@@ -6,6 +6,21 @@ def build_site():
     status = "Active"
     modules = ["Git Workspace", "Python Engine", "GitHub Pages Deployment"]
 
+    nft_collection = [
+        "https://picsum.photos/400/400?random=1",
+        "https://picsum.photos/400/400?random=2",
+        "https://picsum.photos/400/400?random=3"
+    ]
+
+    nft_html_grid = ""
+    for index, url in enumerate(nft_collection, 1):
+        nft_html_grid += f"""
+        <div class="nft-card">
+            <img src="{url}" alt="cNFT #{index}">
+            <div class="nft-info">Asset #{index:03d}</div>            
+        </div>
+        """
+
     # this is to get the current timestamp for the build
     current_time = datetime.now().strftime("%D %H:%M:%S")
     
@@ -30,6 +45,10 @@ def build_site():
     <ul>
         {"".join(f"<li>{mod}</li>" for mod in modules)}
     </ul>
+    <h3 class="gallery-title">Asset Vault (Square Specs)</h3>
+    <div class="nft-grid">
+        {nft_html_grid}
+    </div>
 </body>
 </html>
 """
