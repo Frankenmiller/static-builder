@@ -7,9 +7,9 @@ def build_site():
     modules = ["Git Workspace", "Python Engine", "GitHub Pages Deployment"]
 
     nft_collection = [
-        "https://picsum.photos/400/400?random=1",
-        "https://picsum.photos/400/400?random=2",
-        "https://picsum.photos/400/400?random=3"
+        "https://g.irys.xyz/6nRvg2dRTFpRNeq7PYDya8jUdj3SsFQE185Ada92riZP?ext=png",
+        "https://g.irys.xyz/6nRvg2dRTFpRNeq7PYDya8jUdj3SsFQE185Ada92riZP?ext=png",
+        "https://g.irys.xyz/6nRvg2dRTFpRNeq7PYDya8jUdj3SsFQE185Ada92riZP?ext=png"
     ]
 
     nft_html_grid = ""
