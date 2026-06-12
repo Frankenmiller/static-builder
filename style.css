@@ -50,3 +50,11 @@ body {
     margin: 10px 0 5px 0;
     font-size: 1.1rem;
 }
+
+/* The flexbox wrapper that handles the layout */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* Pushes the title to the left, button to the right */
+  align-items: center;            /* Centers them perfectly on a vertical axis */
+  padding: 1rem 2rem;             /* Gives the header some breathing room */
+}
