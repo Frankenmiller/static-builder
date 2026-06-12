@@ -42,7 +42,13 @@
   left: 0;
   width: 100vw;       /* 100% of viewport width */
   height: 100vh;      /* 100% of viewport height */
-  background: rgba(10, 10, 14, 0.98); /* Deep, ultra-dark slate with high opacity */
+  background: rgba(10, 10, 14, 0.98); 
+background: 
+    radial-gradient(150% 60% ellipse at 25% 0%,
+        rgba(255, 255, 230, 0.4) 0%,
+        rgba(255, 254, 200, 0.15) 17%,
+        rgba(18, 52, 90) 35%),
+    linear-gradient(180deg, #12345a 0%, #020c1b 100%);  
   
   /* Flexbox to center the menu links cleanly */
   display: flex;
@@ -55,7 +61,7 @@
   transform: translateY(-100%); /* Tucked up off-screen */
   
   /* Smooth animation engine */
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, visibility 0.8s;
   z-index: 10;        /* Sits above the main dashboard content */
 }
 
@@ -96,6 +102,6 @@
 
 /* Hover effect to tie it back to your accent color */
 .menu-links a:hover {
-  color: #00ffa3; /* Neon green accent matches your button lines */
+  color: lime; /* Neon green accent matches your button lines */
   transform: scale(1.05); /* Subtle pop outwards when hovered */
 }
