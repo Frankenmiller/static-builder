@@ -16,3 +16,30 @@
 .menu-trigger[aria-expanded="true"] .line.bottom {
   transform: translateY(-19px) translateX(-12px) rotate(-45deg);
 }
+
+/* 1. Style the button's background container */
+.menu-trigger {
+  background: midnightblue;       /* Dark slate/charcoal background */
+  border: 2px solid #333;    /* Subtle border line */
+  border-radius: 8px;        /* Smooth, slightly rounded corners */
+  padding: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for the button box */
+.menu-trigger:hover {
+  background: #2a2a2a;       /* Lightens up slightly when hovered */
+  border-color: lime;     /* Glowing neon green border edge on hover */
+}
+
+/* 2. Style the actual hamburger/X vector lines */
+.hamburger .line {
+  /* Change 'currentColor' to any hex color you want! */
+  stroke: lime;           /* A sharp, futuristic neon green/teal */
+  stroke-width: 10;           /* Thickness of the lines */
+  
+  /* Keep your existing animation rules below intact! */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
