@@ -10,7 +10,7 @@ def build_site():
         "https://g.irys.xyz/6nRvg2dRTFpRNeq7PYDya8jUdj3SsFQE185Ada92riZP?ext=png",
         "https://g.irys.xyz/HPf5wprcVD55351S56PdZoyEo7B1ottKkyaxjcxdzA7q?ext=png",
         "https://arweave.net/bgVJw-s_vWHSKYGCKMEmtgUxTiLTqX_DgIX8w5_M3_4?ext=png",
-        "https://g.irys.xyz/6nRvg2dRTFpRNeq7PYDya8jUdj3SsFQE185Ada92riZP?ext=png"
+        "https://arweave.net/5bmVL95F78T2Ihv5nktoDnWgfG0mp9-VX9vzKg1UYtY?ext=png"
     ]
 
     nft_html_grid = ""
