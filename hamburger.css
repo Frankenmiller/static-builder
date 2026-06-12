@@ -6,7 +6,7 @@
 
 /* 2. The Morph States: What happens when JavaScript flips aria-expanded to "true" */
 .menu-trigger[aria-expanded="true"] .line.top {
-  transform: translateY(20px) rotate(45deg);
+  transform: translateY(17px) translateX(-12px) rotate(45deg);
 }
 
 .menu-trigger[aria-expanded="true"] .line.middle {
@@ -14,5 +14,5 @@
 }
 
 .menu-trigger[aria-expanded="true"] .line.bottom {
-  transform: translateY(-20px) rotate(-45deg);
+  transform: translateY(-17px) translateX(-12px) rotate(-45deg);
 }
