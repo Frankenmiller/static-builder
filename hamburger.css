@@ -1,12 +1,12 @@
 /* 1. This tells the browser to animate the lines smoothly over 0.3 seconds */
 .hamburger .line {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 1s ease;
   transform-origin: center; /* CRITICAL: Forces them to rotate from their middle axis */
 }
 
 /* 2. The Morph States: What happens when JavaScript flips aria-expanded to "true" */
 .menu-trigger[aria-expanded="true"] .line.top {
-  transform: translateY(17px) translateX(-12px) rotate(45deg);
+  transform: translateY(13px) translateX(-12px) rotate(45deg);
 }
 
 .menu-trigger[aria-expanded="true"] .line.middle {
@@ -14,5 +14,5 @@
 }
 
 .menu-trigger[aria-expanded="true"] .line.bottom {
-  transform: translateY(-17px) translateX(-12px) rotate(-45deg);
+  transform: translateY(-19px) translateX(-12px) rotate(-45deg);
 }
