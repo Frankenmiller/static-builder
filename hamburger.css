@@ -1,10 +1,8 @@
-/* 1. This tells the browser to animate the lines smoothly over 0.3 seconds */
 .hamburger .line {
   transition: transform 0.3s ease, opacity 1s ease;
   transform-origin: center; /* CRITICAL: Forces them to rotate from their middle axis */
 }
 
-/* 2. The Morph States: What happens when JavaScript flips aria-expanded to "true" */
 .menu-trigger[aria-expanded="true"] .line.top {
   transform: translateY(13px) translateX(-12px) rotate(45deg);
 }
@@ -17,29 +15,87 @@
   transform: translateY(-19px) translateX(-12px) rotate(-45deg);
 }
 
-/* 1. Style the button's background container */
 .menu-trigger {
-  background: midnightblue;       /* Dark slate/charcoal background */
-  border: 2px solid #333;    /* Subtle border line */
-  border-radius: 8px;        /* Smooth, slightly rounded corners */
+  background: midnightblue;
+  border: 2px solid #333; 
+  border-radius: 8px; 
   padding: 4px;
   cursor: pointer;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* Hover effect for the button box */
 .menu-trigger:hover {
   background: #2a2a2a;       /* Lightens up slightly when hovered */
   border-color: lime;     /* Glowing neon green border edge on hover */
 }
 
-/* 2. Style the actual hamburger/X vector lines */
 .hamburger .line {
-  /* Change 'currentColor' to any hex color you want! */
-  stroke: lime;           /* A sharp, futuristic neon green/teal */
-  stroke-width: 10;           /* Thickness of the lines */
-  
-  /* Keep your existing animation rules below intact! */
+  stroke: lime;
+  stroke-width: 10; 
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: center;
+}
+/* 1. The Full-Screen Cover */
+.fullscreen-menu {
+  position: fixed;    /* Sits relative to the viewport window, ignores scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* 100% of viewport width */
+  height: 100vh;      /* 100% of viewport height */
+  background: rgba(10, 10, 14, 0.98); /* Deep, ultra-dark slate with high opacity */
+  
+  /* Flexbox to center the menu links cleanly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Hide it completely by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%); /* Tucked up off-screen */
+  
+  /* Smooth animation engine */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+  z-index: 10;        /* Sits above the main dashboard content */
+}
+
+/* 2. THE ACTIVATION TRIGGER: When button is true, drop the menu down */
+.menu-trigger[aria-expanded="true"] ~ .fullscreen-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Drops down smoothly to center screen */
+}
+
+/* 3. Keep the hamburger button elevated so it stays clickable on top of the overlay */
+.menu-trigger {
+  position: relative;
+  z-index: 20; /* Higher than the menu overlay's z-index */
+}
+
+/* 4. Navigation Link Styling */
+.menu-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li {
+  margin: 2.5rem 0;
+}
+
+.menu-links a {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Hover effect to tie it back to your accent color */
+.menu-links a:hover {
+  color: #00ffa3; /* Neon green accent matches your button lines */
+  transform: scale(1.05); /* Subtle pop outwards when hovered */
 }
