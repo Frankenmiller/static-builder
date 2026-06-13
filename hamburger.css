@@ -44,12 +44,15 @@
   height: 100vh;      /* 100% of viewport height */
   background: rgba(10, 10, 14, 0.98); 
   z-index: 10;
-background: 
+    background: 
     radial-gradient(150% 60% ellipse at 25% 0%,
         rgba(255, 255, 230, 0.4) 0%,
         rgba(255, 254, 200, 0.15) 17%,
-        rgba(18, 52, 90) 35%),
-    linear-gradient(180deg, #12345a 0%, #020c1b 100%);  
+        transparent 35%),
+    linear-gradient(180deg, 
+        #12345a 0%, 
+        #020c1b 90%, 
+        #c2b280 100%);
   
   /* Flexbox to center the menu links cleanly */
   display: flex;
