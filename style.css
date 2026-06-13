@@ -75,3 +75,54 @@ h1 {
   width: 100%;
   box-sizing: border-box;       
 }
+
+/* ========================================================
+   UNDERWATER BUBBLE SYSTEM
+   ======================================================== */
+
+/* 1. The Container: Keeps bubbles locked to the screen background */
+.bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;           /* Drops them behind your text and cards */
+  pointer-events: none; /* Makes them click-through so they don't block buttons */
+  overflow: hidden;     /* Clips bubbles so they don't create weird scrollbars */
+}
+
+/* 2. The Bubble Blueprint: Translucent, round, and glossy */
+.bubble {
+  position: absolute;
+  bottom: -50px; /* Start completely hidden just below the bottom of the screen */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: floatUp 12s infinite linear;
+}
+
+/* 3. Randomizing each bubble's position, size, and speed */
+.bubble:nth-child(1) { left: 10%; width: 30px; height: 30px; animation-duration: 10s; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 30%; width: 15px; height: 15px; animation-duration: 14s; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 55%; width: 25px; height: 25px; animation-duration: 11s; animation-delay: 4s; }
+.bubble:nth-child(4) { left: 75%; width: 10px; height: 10px; animation-duration: 8s;  animation-delay: 1s; }
+.bubble:nth-child(5) { left: 90%; width: 40px; height: 40px; animation-duration: 16s; animation-delay: 5s; }
+
+/* 4. The Engine: Animates them up the screen and drifts them slightly right */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* Fade into view cleanly as they leave the sand */
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-115vh) translateX(50px); /* Travel up past the top of the screen */
+    opacity: 0; /* Pop and fade away */
+  }
+}
