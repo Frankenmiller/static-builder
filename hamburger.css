@@ -51,7 +51,7 @@
         transparent 35%),
     linear-gradient(180deg, 
         #12345a 0%, 
-        #020c1b 90%, 
+        #020c1b 80%, 
         #c2b280 100%);
   
   /* Flexbox to center the menu links cleanly */
