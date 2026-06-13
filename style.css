@@ -76,3 +76,22 @@ h1 {
   box-sizing: border-box;       
 
 }
+
+/* ========================================================
+   RESPONSIVE DESIGN (MOBILE OVERRIDES)
+   ======================================================== */
+
+/* When the screen width is 480px or smaller (smartphones) */
+@media (max-width: 480px) {
+  
+  body {
+    /* Adjusts your linear gradient so the sand color (#c2b280) doesn't kick in until 96% */
+    background: 
+      radial-gradient(150% 60% ellipse at 25% 0%, rgba(255, 255, 230, 0.4) 0%, rgba(255, 254, 200, 0.15) 17%, transparent 35%),
+      linear-gradient(180deg, #12345a 0%, #020c1b 96%, #c2b280 100%);
+      
+    /* Optional: Slightly reduce bottom padding on mobile if needed */
+    padding-bottom: 100px; 
+  }
+
+}
