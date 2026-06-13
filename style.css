@@ -108,6 +108,11 @@ h1 {
 .bubble:nth-child(3) { left: 55%; width: 25px; height: 25px; animation-duration: 11s; animation-delay: 4s; }
 .bubble:nth-child(4) { left: 75%; width: 10px; height: 10px; animation-duration: 8s;  animation-delay: 1s; }
 .bubble:nth-child(5) { left: 90%; width: 40px; height: 40px; animation-duration: 16s; animation-delay: 5s; }
+.bubble:nth-child(6) { left: 20%; width: 20px; height: 20px; animation-duration: 12s; animation-delay: 3s; }
+.bubble:nth-child(7) { left: 45%; width: 35px; height: 35px; animation-duration: 15s; animation-delay: 1s; }
+.bubble:nth-child(8) { left: 65%; width: 12px; height: 12px; animation-duration: 9s;  animation-delay: 6s; }
+.bubble:nth-child(9) { left: 80%; width: 28px; height: 28px; animation-duration: 13s; animation-delay: 2s; }
+.bubble:nth-child(10) { left: 35%; width: 18px; height: 18px; animation-duration: 11s; animation-delay: 7s; }
 
 /* 4. The Engine: Animates them up the screen and drifts them slightly right */
 @keyframes floatUp {
